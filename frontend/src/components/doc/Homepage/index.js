@@ -28,14 +28,14 @@ const HomePage = () => {
           <Link onClick={()=>{setProcess("Setting")}}>Settings</Link>
           <div style={{bottom:'20px',position:'absolute'}}>
           <Row><Col>
-          <TextField margin='normal' required sx={{ width: '100%' }} id='gender' select name='gender' label='Client'  InputLabelProps={{ shrink: true, required: true }}>
+          <TextField margin='normal' sx={{ width: '100%' }} id='client' select name='client' label='Client'  InputLabelProps={{ shrink: true, required: true }}>
 
 <MenuItem value={'Male'}>Male</MenuItem>
 <MenuItem value={'Female'}>Female</MenuItem>
 <MenuItem value={'Other'}>Other</MenuItem>
 </TextField>
    
-   </Col><Col><TextField margin='normal' required sx={{ width: '100%' }} id='gender' select name='gender' label='Journal'  InputLabelProps={{ shrink: true, required: true }} >
+   </Col><Col><TextField margin='normal' sx={{ width: '100%' }} id='journal' select name='journal' label='Journal'  InputLabelProps={{ shrink: true, required: true }} >
 
 <MenuItem value={'Male'}>Male</MenuItem>
 <MenuItem value={'Female'}>Female</MenuItem>
@@ -44,19 +44,24 @@ const HomePage = () => {
 
 </Col></Row>
          
-<TextField margin='normal' required fullWidth id='email' name='email' type='file' label='Select a Docx File'  InputLabelProps={{ shrink: true, required: true }} />
+<TextField margin='normal' required fullWidth id='file' name='file' type='file' label='Select a Docx File' onChange={handleFileChange} InputLabelProps={{ shrink: true, required: true }} />
 
           <button className='w-100'>DOWNLOAD</button>
           </div>
         </div>
         <div className="main-content">
         {docxFile && (
-        <div style={{ height: '750px' }}>
-          <FileViewer
-            fileType="docx"
-            filePath={URL.createObjectURL(docxFile)}
-            key={docxFile.name}
-          />
+        <div style={{ height: '645px' }}>
+        
+        <FileViewer 
+  fileType="docx"
+  filePath={URL.createObjectURL(docxFile)}
+  key={docxFile.name}/>
+  
+
+
+
+
         </div>
       )}
 

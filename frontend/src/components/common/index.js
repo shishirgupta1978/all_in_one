@@ -43,7 +43,7 @@ const CommonRoutes = () => {
               <Route path="cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
           </Route>
           <Route path="/doc" element={<DocLayout/>} >
-            <Route index element={<PrivateRoute><DocHomepage /></PrivateRoute>} />
+            <Route index element={<DocHomepage />} />
             <Route path="*" element={<NotFound/>} />
             </Route>     
     
