@@ -1,0 +1,43 @@
+// Navbar.scss
+
+.navbar {
+//    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .navbar__brand {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.5rem;
+  
+    &:hover {
+      color: #333;
+    }
+  }
+  
+  .navbar__toggle {
+    border-color: #333;
+  }
+  
+  .navbar__nav {
+    margin-left: auto;
+  }
+  
+  .navbar__link {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      color: #007bff;
+    }
+  
+    &.active {
+      color: #007bff;
+    }
+  }
+  
